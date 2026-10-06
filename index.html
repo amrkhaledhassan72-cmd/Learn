@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Future Leaders | تعلّم الإنجليزية مع عائشة</title>
+<meta name="description" content="موقع تعليمي للأطفال من 6 إلى 8 سنوات لتعلم الحروف والأصوات وكلمات CVC والقراءة بالإنجليزية بطريقة ممتعة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home">Future Leaders</a>
+  <button class="menu-btn" aria-label="القائمة" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#home">الرئيسية</a><a href="#letters">الحروف والأصوات</a><a href="#cvc">CVC Words</a>
+    <a href="#stories">القصص</a><a href="#videos">الفيديوهات</a><a href="#flash">Flash Cards</a>
+    <a href="#rewards">مكافآتي</a><a href="#journey">رحلتي</a>
+  </nav>
+  <a class="btn small" href="#letters">ابدأ التعلم</a>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-text">
+    <p class="tag">Future Leaders</p>
+    <h1>أهلاً بكم مع عائشة، يداً بيد لنبني جيلاً مبدعاً</h1>
+    <p class="lead">هيا يا أبطال نتعلم اللغة الإنجليزية بسهولة ومتعة وثقة!</p>
+    <p>أُعلّم أصدقائي وزملائي اللغة الإنجليزية بكل حب وثقة، ونبني معًا جيلاً مبدعًا يستطيع القراءة والانطلاق.</p>
+    <div class="actions"><a class="btn" href="#letters">ابدأ التعلم</a><a class="btn ghost" href="#learn">اكتشف الدروس</a></div>
+  </div>
+  <div class="hero-art" role="img" aria-label="حروف ملونة وكتاب وصاروخ">
+    <span class="blk b1">A</span><span class="blk b2">B</span><span class="blk b3">C</span>
+    <span class="big">📖</span><span class="rocket">🚀</span>
+  </div>
+</section>
+
+<section id="learn" class="wrap">
+  <h2>ماذا سنتعلم؟</h2>
+  <div class="grid" id="learnGrid"></div>
+</section>
+
+<section id="letters" class="wrap tint">
+  <h2>الحروف والأصوات</h2>
+  <p class="sub">جاهز يا بطل؟ اضغط على الحرف لتسمع صوته!</p>
+  <div class="letters" id="letterRow"></div>
+  <div class="letter-show" id="letterShow" aria-live="polite">اختر حرفًا لنبدأ 👆</div>
+</section>
+
+<section id="cvc" class="wrap">
+  <h2>CVC Words</h2>
+  <p class="sub">حرف ساكن + حرف علّة + حرف ساكن. لنركب الكلمة معًا!</p>
+  <div class="chips" id="cvcChips"></div>
+  <div class="builder">
+    <div class="slots" id="slots" dir="ltr"></div>
+    <div class="tray" id="tray" dir="ltr"></div>
+    <div class="result" id="cvcResult" aria-live="polite">اضغط الحروف بالترتيب</div>
+  </div>
+</section>
+
+<section id="read" class="wrap tint">
+  <h2>أنا أستطيع القراءة!</h2>
+  <div class="read-grid">
+    <div><h3>كلمات</h3><div class="words" id="readWords" dir="ltr"></div>
+    <h3>جمل</h3><div class="sentences" id="readSent" dir="ltr"></div></div>
+    <div class="quiz"><h3>اختبار صغير</h3><div class="q-emoji" id="qEmoji"></div><div class="q-opts" id="qOpts" dir="ltr"></div><p id="qMsg" aria-live="polite"></p></div>
+  </div>
+</section>
+
+<section id="stories" class="wrap">
+  <h2>القصص</h2>
+  <p class="sub">اقرأ الجملة ثم شاهد الصورة.</p>
+  <div class="story" id="story"></div>
+</section>
+
+<section id="videos" class="wrap tint">
+  <h2>فيديوهات تعليمية</h2>
+  <p class="sub">أماكن الفيديوهات جاهزة. ضع رابط الفيديو في data-src داخل script.js.</p>
+  <div class="grid" id="videoGrid"></div>
+</section>
+
+<section id="flash" class="wrap">
+  <h2>Flash Cards</h2>
+  <p class="sub">اضغط على البطاقة لتقلبها!</p>
+  <div class="flash-grid" id="flashGrid"></div>
+</section>
+
+<section id="rewards" class="wrap tint">
+  <h2>مكافآتي</h2>
+  <p class="count" id="rewardCount"></p>
+  <div class="grid" id="rewardGrid"></div>
+</section>
+
+<section id="journey" class="wrap">
+  <h2>رحلتي في التعلم</h2>
+  <div class="bars" id="bars"></div>
+  <button class="btn ghost" id="resetBtn">ابدأ من جديد</button>
+</section>
+
+<section class="wrap about">
+  <h2>من أنا؟</h2>
+  <p>أنا عائشة، وصممت Future Leaders لأساعد أصدقائي وزملائي على تعلم اللغة الإنجليزية بطريقة أبسط وأسهل وأكثر متعة.</p>
+  <p>أؤمن أن التعلم يصبح أجمل عندما نتعلم معًا، ونشجع بعضنا، ونفرح بكل خطوة صغيرة نحققها.</p>
+  <h3>كيف تم بناء Future Leaders؟</h3>
+  <p>تم تصميم وبناء هذا الموقع بواسطة عائشة باستخدام أسلوب Vibe Coding، مع استخدام HTML وCSS وJavaScript لجعل الموقع تفاعليًا وسهل الاستخدام وجذابًا للأطفال.</p>
+  <p>الموقع يدعم جميع الأجهزة: Desktop · Laptop · Tablet · Mobile (Responsive Design)</p>
+</section>
+
+<section class="advice">
+  <h2>نصيحة من عائشة ❤️</h2>
+  <p>لا تخاف من الخطأ، فكل كلمة جديدة تتعلمها هي خطوة جديدة نحو النجاح. اقرأ، حاول، تعلم، واستمر... لأنك تستطيع أن تصبح Future Leader!</p>
+</section>
+</main>
+
+<footer>
+  <strong>Future Leaders</strong>
+  <p>نتعلم اليوم... لنقود المستقبل غدًا.</p>
+  <nav><a href="#letters">الحروف</a><a href="#cvc">CVC</a><a href="#stories">القصص</a><a href="#flash">Flash Cards</a><a href="#rewards">مكافآتي</a></nav>
+  <small>© 2026 Future Leaders · Created by Aisha</small>
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="modal" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
